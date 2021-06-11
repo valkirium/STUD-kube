@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ну привет</title>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet"  type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+</head>
+
+<body>
+  <form class="centered11">
+    <a href="/index.php" ><img title="На главную" src="images/back.png" class="size"></a>
+  </form>     
+
+  <form class="centered12">
+    <h2 class="textStyle">Выбери то, о чем хочешь узнать подробнее</h2>
+  </form> 
+ 
+  <form id="info" class="centered13">
+    <fieldset class="ask">
+      <legend class="textStyle">Проект создан с помощью следующих технологий</legend>
+        <label for="" class="textStyle3">
+          <input type="radio" name="1" value="PHP7" id="radio1" >
+          PHP7
+        </label>
+        <label for="" class="textStyle3">
+          <input type="radio" name="1" value="HTML5" id="radio2">
+          HTML5
+        </label>
+        <label for="" class="textStyle3">
+          <input type="radio" name="1" value="CSS" id="radio3">
+          CSS
+        </label>
+        <label for="" class="textStyle3">
+          <input type="radio" name="1" value="JavaScript1.8.5" id="radio4">
+          JavaScript1.8.5
+        </label>
+        <label for="" class="textStyle3">
+          <input type="radio" name="1" value="Apache2" id="radio5">
+          Apache2
+        </label>
+        <label for="" class="textStyle3">
+          <input type="radio" name="1" value="PostgreSQL13" id="radio6">
+          PostgreSQL13
+        </label>
+        <label for="" class="textStyle3">
+          <input type="radio" name="1" value="Docker18" id="radio7">
+          Docker18
+        </label>
+        <label for="" class="textStyle3">
+          <input type="radio" name="1" value="Docker-Compose1.29" id="radio8">
+          Docker Compose1.29
+        </label>
+    </fieldset>
+  </form>
+  <div class="centered17">
+    <div id="text1" style="display: none;">
+      <h2 class="textStyle4">PHP</h2><br>
+      <h3 class="textStyle3">Cкриптовый язык общего назначения, интенсивно применяемый для разработки веб-приложений. 
+      В настоящее время поддерживается подавляющим большинством хостинг-провайдеров и является одним из лидеров среди 
+      языков, применяющихся для создания динамических веб-сайтов.</h3><br>
+      <h3 class="textStyle3">С помощью этого ЯП написана большая часть этого проекта.</h3>
+      <img title="Скрипты" src="images/PHP.png" class="centered16">
+    </div>
+
+    <div id="text2" style="display: none;">
+      <h2 class="textStyle4">HTML5</h2><br>
+      <h3 class="textStyle3">Cтандартизированный язык разметки документов во Всемирной паутине. Большинство веб-страниц содержат описание разметки на языке 
+      HTML. Язык HTML интерпретируется браузерами, полученный в результате интерпретации форматированный текст отображается на экране монитора компьютера 
+      или мобильного устройства.</h3><br>
+      <img title="HTML" src="images/HTML5.png" class="centered18">
+    </div>
+
+    <div id="text3" style="display: none;">
+      <h2 class="textStyle4">CSS</h2><br>
+      <h3 class="textStyle3">Формальный язык описания внешнего вида документа (веб-страницы), написанного с использованием языка разметки HTML. 
+      Также может применяться к любым XML-документам, например, к SVG или XUL.</h3><br>
+      <img title="HTML" src="images/CSS.png" class="centered19">
+    </div>
+
+    <div id="text4" style="display: none;">
+      <h2 class="textStyle4">JavaScript</h2><br>
+      <h3 class="textStyle3">Язык программирования, который позволяет создать динамически обновляемый контент, управляет мультимедиа, анимирует изображения и так далее</h3><br>
+      <img title="HTML" src="images/javascript.png" class="centered20">
+    </div>
+
+    <div id="text5" style="display: none;">
+      <h2 class="textStyle4">Apache</h2><br>
+      <h3 class="textStyle3">Cвободный веб-сервер.
+      Apache является кроссплатформенным ПО, поддерживает операционные системы Linux, BSD, Mac OS, Microsoft Windows, Novell NetWare, BeOS.
+      Основными достоинствами Apache считаются надёжность и гибкость конфигурации. Он позволяет подключать внешние модули для предоставления данных, 
+      использовать СУБД для аутентификации пользователей, модифицировать сообщения об ошибках и т. д. Поддерживает IPv4.</h3><br>
+      <h3 class="textStyle3">Именно на этом веб-сервере запущен этот веб-сайт.</h3>
+      <img title="HTML" src="images/Apache.png" class="centered21">
+    </div>
+
+    <div id="text6" style="display: none;">
+      <h2 class="textStyle4">PostgreSQL</h2><br>
+      <h3 class="textStyle3">Свободная объектно-реляционная система управления базами данных (СУБД).
+      Существует в реализациях для множества UNIX-подобных платформ, включая AIX, различные BSD-системы, 
+      HP-UX, IRIX, Linux, macOS, Solaris/OpenSolaris, Tru64, QNX, а также для Microsoft Windows.</h3><br>
+      <h3 class="textStyle3">Эта СУБД используется в этом проекте. С помощью PostgreSQL данные о пользователях и их сообщения записываются в базу данных.</h3>
+      <img title="HTML" src="images/Postgresql.png" class="centered22">
+    </div>
+
+    <div id="text7" style="display: none;">
+      <h2 class="textStyle4">Docker</h2><br>
+      <h3 class="textStyle3">Docker - это контейнеризатор приложений. Каждый контейнер строится на основе Docker-образов. Контейнеры запускаются напрямую из ядра операционной системы Linux. 
+      Благодаря этому, они потребляют гораздо меньше ресурсов, чем при аппаратной виртуализации.<br>
+      Изоляция рабочей среды осуществляется при помощи технологии namespace. Для каждого изолированного пространства (контейнера) создается уникальное пространство имен, которое и обеспечивает к нему доступ.
+      Любой процесс, выполняемый внутри контейнера, ограничивается namespace.<br>
+      Благодаря пространству имён NET мы можем выделять для изолированных процессов собственные сeтевые интерфейсы. Даже loopback-интерфейс для каждого пространства имён будет отдельным.<br>        
+      С помощью же пространств имён MOUNT можно создавать полностью независимые файловые системы, ассоциируемые с различными процессами.        
+      Docker применяется для управления отдельными контейнерами (сервисами), из которых состоит приложение.<br>
+      В этом проекте используется два контейнера. Один с веб-сервером Apache, другой с СУБД PostgreSQL</h3>
+      <img title="HTML" src="images/Docker.png" class="centered23">
+    </div>
+
+    <div id="text8" style="display: none;">
+      <h2 class="textStyle4">Docker-Compose</h2><br>
+      <h3 class="textStyle3">Docker Compose используется для одновременного управления несколькими контейнерами, входящими в состав приложения. 
+      Этот инструмент предлагает те же возможности, что и Docker, но позволяет работать с более сложными приложениями.</h3><br>
+      <img title="HTML" src="images/Docker-compose.png" class="centered24">
+    </div>
+  </div>
+
+
+
+
+
+
+
+<script src="scripts.js"></script> 
+ 
+</body>
+
+</html>

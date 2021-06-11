@@ -42,5 +42,22 @@ require_once("dbconnect.php");
         ?>
     </p>
 </form>
+
+<div class="container">
+    <div class="centered10">
+        <h3 class="textStyle">Хочешь узнать, как создавался этот сайт?</h3>
+        <button type="button" class="butt4" onClick='location.href="/info.html"'>Информация</button>
+    </div>
+</div>
+<?php
+    //-----------------Проверка, прошел ли пользователь аутентификацию-----------------
+    if(isset($_SESSION['login']) && isset($_SESSION['password'])){
+        ?>
+        <div id="link_logout" class="centered9">
+        <a href="/logout.php" class="butt">Выход</a>
+        </div>
+    <?php
+    };
+    ?>
 </body>
 </html>

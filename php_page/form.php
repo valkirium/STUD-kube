@@ -113,5 +113,15 @@ require_once("dbconnect.php");
         </div>
     </div>
 <?php endif; ?>
+<?php
+    //-----------------Проверка, прошел ли пользователь аутентификацию-----------------
+    if(isset($_SESSION['login']) && isset($_SESSION['password'])){
+        ?>
+        <div id="link_logout" class="centered9">
+        <a href="/logout.php" class="butt">Выход</a>
+        </div>
+    <?php
+    };
+    ?>
 </body>
 </html>

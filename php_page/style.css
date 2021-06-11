@@ -195,6 +195,112 @@ body{
     left: 90%;
     transform: translate(-50%,-50%);
 }
+.centered10 {
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.centered11 {
+    position: fixed;
+    top: 5%;
+    left: 2%;
+    transform: translate(-50%,-50%);
+}
+.centered12 {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.centered13 {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.centered14 {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.centered15 {
+    position: fixed;
+    top: 500px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.centered16 {
+    position: fixed;
+    width: 500px;
+    height: 300px;
+    top: 390px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.centered17 {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.centered18 {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.centered19 {
+    position: fixed;
+    width: 140px;
+    height: 210px;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.centered20 {
+    position: fixed;
+    width: 200px;
+    height: 210px;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.centered21 {
+    position: fixed;
+    width: 400px;
+    height: 210px;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.centered22 {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    top: 450px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.centered23 {
+    position: fixed;
+    width: 600px;
+    height: 150px;
+    top: 480px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.centered24 {
+    position: fixed;
+    width: 250px;
+    height: 250px;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 .centered_block{
     position: fixed;
     top: 120%;
@@ -252,10 +358,27 @@ input{
 
     text-align: center;
 }
+.textStyle3{
+    color: #090909;
+    font-family: cursive, "Comic Sans MS";
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-align: center;
+}
+.textStyle4{
+    color: #090909;
+    font-family: cursive, "Comic Sans MS";
+    letter-spacing: 1px;
+    text-align: center;
+}
 select {
     height: 30px;
     overflow: hidden;
     border-radius: 10px;
     border: solid 1px #c7ccd1;
     background-color: rgba(255, 255, 255, 0.51);
+}
+.size{
+    width: 40px;
+    height: 40px;
 }
