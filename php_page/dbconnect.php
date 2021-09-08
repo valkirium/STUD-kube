@@ -6,5 +6,6 @@
     }
     //-----------------Добавление переменной, которая будет содержать адрес (URL) сайта
     $server_ip = gethostbyname($_SERVER['SERVER_NAME']);
-    $address_site = "http://$server_ip:8080";
+    $server_port = gethostbyname($_SERVER['SERVER_PORT']);
+    $address_site = "http://$server_ip:$server_port";
 ?>
