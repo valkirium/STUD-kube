@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: website-db
+  labels:
+    name: website-db
+  namespace: student-project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: website-db
+  template:
+    metadata:
+      labels:
+        name: website-db
+    spec:
+      affinity:
+        nodeAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 1
+            preference:
+              matchExpressions:
+              - key: disktype
+                operator: In
+                values:
+                - m2-ssd  
+      containers:
+      - name: website-db
+        image: postgres:13.2
+        ports:
+        - name: postgres
+          containerPort: 5432
+        volumeMounts:
+          - mountPath: /var/lib/postgresql/data
+            name: tmp-volume
+      volumes:
+      - name: tmp-volume
+        hostPath:
+          path: /root/Final_Student_Project/data
+          type: Directory
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: website-db
+  labels:
+    name: website-db
+  namespace: student-project
+spec:
+  ports:
+    # the port that this service should serve on
+  - port: 5432
+    targetPort: 5432
+  selector:
+    name: website-db
