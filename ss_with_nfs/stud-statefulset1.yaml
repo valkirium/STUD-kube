@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+  name: website 
+  namespace: student-project
+spec:
+  serviceName: "website"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: website
+  template:
+    metadata:
+      labels:
+        app: website
+    spec:
+      containers:
+      - name: website 
+        image: valkirium/website-php:3.0
+        ports:
+        - containerPort: 8080
+          name: website
+        volumeMounts:
+        - name: php-page
+          mountPath: /var/www/html
+  volumeClaimTemplates:
+  - metadata:
+      name: php-page
+    spec:
+      accessModes: [ "ReadWriteMany" ]
+      storageClassName: "nfs"
+      resources:
+        requests:
+          storage: 1Gi
+
