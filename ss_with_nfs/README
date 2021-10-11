@@ -1,0 +1,1 @@
+IN dbconnect.php host=postgres.student-project.svc.cluster.local
