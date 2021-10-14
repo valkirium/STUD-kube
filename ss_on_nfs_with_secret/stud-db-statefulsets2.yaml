@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+  name: website-db 
+  namespace: student-project
+spec:
+  serviceName: "postgres"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:13.2
+        ports:
+        - containerPort: 5432
+          name: website-db
+        volumeMounts:
+        - name: data
+          mountPath: /var/lib/postgresql/data
+        env:
+        -  name: POSTGRES_PASSWORD
+           valueFrom:
+             secretKeyRef:
+               name: pgsecret
+               key: password 
+      volumes:
+      - name: postgres-secret
+        secret:
+          defaultMode: 256
+          secretName: postgresdb-postgres-secret 
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes: [ "ReadWriteMany" ]
+      storageClassName: "nfs" 
+      resources:
+        requests:
+          storage: 5Gi    
